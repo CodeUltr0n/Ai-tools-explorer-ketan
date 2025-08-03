@@ -1,6 +1,6 @@
 'use client';
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import styles from './tools.module.css';
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -14,88 +14,83 @@ const Toolspage = () => {
 
   useEffect(() => {
     if (!error) return;
-
-    const timer = setTimeout(() => {
-      setError(null);
-    }, 4000);
-
+    const timer = setTimeout(() => setError(null), 4000);
     return () => clearTimeout(timer);
   }, [error]);
 
-  useEffect(() => {
-    setError(null);
-  }, [prompt]);
+  useEffect(() => setError(null), [prompt]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+    const formData = new FormData(e.currentTarget);
     const prompt = formData.get('prompt')?.toString() || '';
 
-    let initialPrediction;
     try {
       const response = await fetch('/api/predictions', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt }),
       });
 
       if (!response.ok) {
-        let errorData: any = {};
-        try {
-          errorData = await response.json();
-        } catch (jsonErr) {
-          // If JSON parsing fails, errorData stays as empty object
-        }
+        const errorData = await response.json().catch(() => ({}));
         setError(errorData.detail || 'Unknown error from API');
         setLoading(false);
         return;
       }
 
-      initialPrediction = await response.json();
+      const initialPrediction = await response.json();
+      if (initialPrediction.image) {
+        setImageUrl(`data:image/png;base64,${initialPrediction.image}`);
+      } else {
+        setError('Image generation failed.');
+      }
+
     } catch (err) {
-      console.error('Error parsing JSON:', err);
+      console.error('Error:', err);
       setError('Failed to generate image. Please try again.');
+    } finally {
       setLoading(false);
-      return;
     }
-
-    if (initialPrediction.image) {
-      setImageUrl(`data:image/png;base64,${initialPrediction.image}`);
-    } else {
-      setError('Image generation failed.');
-    }
-
-    setLoading(false);
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col relative ">
+    <div className="min-h-screen bg-black text-white flex flex-col relative">
       <div className="flex flex-1">
         <div className="flex flex-col justify-center items-center flex-grow ml-8 mr-4.5">
           <div className="header text-2xl mb-8">Imagine it. Generate it.</div>
           <div className="flex items-center gap-4 bg-[#111] p-4 rounded-lg">
-           <div className="bg-[#1a1a1a] px-4 py-2 rounded">
-           {prompt || 'No prompt entered yet.'}
+            <div className="bg-[#1a1a1a] px-4 py-2 rounded">
+              {prompt || 'No prompt entered yet.'}
             </div>
             <div className="text-white text-2xl">→</div>
             <div className="bg-[#1a1a1a] px-4 py-2 rounded">PixelForge</div>
             <div className="text-white text-2xl">→</div>
             {imageUrl && (
-              <img src={imageUrl} alt="Result" className="w-24 h-24 object-cover rounded" />
+              <Image
+                src={imageUrl}
+                alt="Result"
+                width={96}
+                height={96}
+                className="object-cover rounded"
+              />
             )}
           </div>
         </div>
 
         {imageUrl && (
-          <div className=" flex justify-center mt-56 mr-2 ">
-            <div className='result-card w-[250px] h-[320px] bg-[#1a1a1a] rounded-lg overflow-hidden shadow-md border border-gray-700'>
-              <img src={imageUrl} alt="Result" className="w-67 h-67 object-cover p-2" />
+          <div className="flex justify-center mt-56 mr-2">
+            <div className="result-card w-[250px] h-[320px] bg-[#1a1a1a] rounded-lg overflow-hidden shadow-md border border-gray-700">
+              <Image
+                src={imageUrl}
+                alt="Result"
+                width={270}
+                height={270}
+                className="object-cover p-2"
+              />
               <div className="p-3 flex justify-between items-center">
                 <a
                   href={imageUrl}
