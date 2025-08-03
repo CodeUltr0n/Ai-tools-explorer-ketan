@@ -6,19 +6,17 @@ Generate high-quality, unique images from text prompts using multiple AI models.
 
 ## 🚀 Live Demo
 
-👉 [Ai-Tool-explorer]([https://your-vercel-url.vercel.app](https://ai-tools-explorer-ketan-sa5l-6yiplsy0o-ketan-chokkaras-projects.vercel.app/))
+👉 [AI Tool Explorer](https://ai-tools-explorer-ketan-sa5l-6yiplsy0o-ketan-chokkaras-projects.vercel.app/)
 
 ---
 
 ## 📸 Snapshots
 
-![Homepage](<img width="1552" height="939" alt="Screenshot 2025-08-03 at 6 29 59 PM" src="https://github.com/user-attachments/assets/8e56a949-a8fb-4bcc-bc5b-adf63737f900" />
-)
-![Select Your Model](<img width="1552" height="939" alt="Screenshot 2025-08-03 at 6 30 30 PM" src="https://github.com/user-attachments/assets/e7637b79-7821-420f-b1e7-7a72984a9d0b" />
-)
-![enter your prompt](<img width="1552" height="939" alt="Screenshot 2025-08-03 at 6 30 46 PM" src="https://github.com/user-attachments/assets/f2facae6-197a-45c2-8d8a-485b0b473013" />
-)
-![Generation Example](https://drive.google.com/file/d/1FMcABS_asKqMoSGKizecs2IAY4vY1w-1/view?usp=drive_link)
+![Homepage](https://github.com/user-attachments/assets/8e56a949-a8fb-4bcc-bc5b-adf63737f900)
+![Select Your Model](https://github.com/user-attachments/assets/e7637b79-7821-420f-b1e7-7a72984a9d0b)
+![Enter Your Prompt](https://github.com/user-attachments/assets/f2facae6-197a-45c2-8d8a-485b0b473013)
+
+🎥 [Watch Demo Video](https://drive.google.com/file/d/1FMcABS_asKqMoSGKizecs2IAY4vY1w-1/view?usp=drive_link)
 
 ---
 
@@ -29,6 +27,7 @@ Generate high-quality, unique images from text prompts using multiple AI models.
 - 🎯 Clean, responsive, and modern UI using Tailwind CSS
 - 💾 Download and copy generated images
 - 🌐 Deployed on Vercel
+
 
 ---
 
