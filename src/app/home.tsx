@@ -28,10 +28,10 @@ const Home = () => {
         ].map((img, i) => (
           <div key={i} className={`float-img-wrapper float-delay-${i}`}>
             <Image
-              src={image.src}
-              alt={image.alt}
-              width={image.size}
-              height={image.size}
+              src={img.src}
+              alt={img.alt}
+              width={img.size}
+              height={img.size}
               className="rounded-2xl hover:scale-105 transition-transform"
             />
           </div>
