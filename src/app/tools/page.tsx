@@ -1,12 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import styles from './tools.module.css';
-
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+// Removed: import styles from './tools.module.css';
+// Removed: const sleep = (ms: number) => new Promise(...);
 
 const Toolspage = () => {
-  const [prediction, setPrediction] = useState<any>(null);
+  // Removed: prediction and setPrediction (not used)
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [prompt, setPrompt] = useState('');
