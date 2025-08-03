@@ -23,7 +23,7 @@ const Home = () => {
           { src: '/images/image1.png', alt: 'Floating 1', size: 56 },
           { src: '/images/image2.png', alt: 'Floating 2', size: 56 },
           { src: '/images/image3.png', alt: 'Floating 3', size: 60 },
-          { src: '/images/image4.png', alt: 'Floating 4', size: 60 },
+          { src: '/images/image4.png', alt: 'Floating 4', size: 64 },
           { src: '/images/image5.png', alt: 'Floating 5', size: 56 },
         ].map((img, i) => (
           <div key={i} className={`float-img-wrapper float-delay-${i}`}>
