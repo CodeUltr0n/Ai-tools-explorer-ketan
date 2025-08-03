@@ -26,45 +26,47 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+
         <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end space-y-2 group">
           <div className="relative">
-          <Link href="/">
-  <Image
-    src="/logo.png"
-    alt="Developer Info"
-    width={64}
-    height={64}
-    className="rounded-full border border-white shadow-lg cursor-pointer animate-pulse hover:scale-105 transition-transform duration-200"
-  />
-</Link>
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="Developer Info"
+                width={64}
+                height={64}
+                className="rounded-full border border-white shadow-lg cursor-pointer animate-pulse hover:scale-105 transition-transform duration-200"
+              />
+            </Link>
+
             <div className="absolute bottom-full right-0 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs px-3 py-2 rounded shadow-lg whitespace-nowrap">
               Developed by Ketan Chokkara · Internship 2025
-            </div></a>
-           
+            </div>
           </div>
-          <a href="https://github.com/CodeUltr0n" target="_blank" rel="noopener noreferrer">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+
+          <Link href="https://github.com/CodeUltr0n" target="_blank">
+            <Image
               src="/github.png"
               alt="GitHub"
-              className="w-8 h-8 rounded-full border border-white shadow-md hover:scale-110 transition-transform duration-200"
+              width={32}
+              height={32}
+              className="rounded-full border border-white shadow-md hover:scale-110 transition-transform duration-200"
             />
-          </a>
-          <a href="https://www.linkedin.com/in/ketan-chokkara-2888b2274/" target="_blank" rel="noopener noreferrer">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+          </Link>
+
+          <Link href="https://www.linkedin.com/in/ketan-chokkara-2888b2274/" target="_blank">
+            <Image
               src="/linkedin.png"
               alt="LinkedIn"
-              className="w-8 h-8 rounded-full border border-white shadow-md hover:scale-110 transition-transform duration-200"
+              width={32}
+              height={32}
+              className="rounded-full border border-white shadow-md hover:scale-110 transition-transform duration-200"
             />
-          </a>
+          </Link>
         </div>
       </body>
     </html>
-
   );
 }
