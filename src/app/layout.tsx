@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from 'next/link';
+import Image from 'next/image';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +32,15 @@ export default function RootLayout({
         {children}
         <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end space-y-2 group">
           <div className="relative">
-           <a href="/"> <img
-              src="/logo.png"
-              alt="Developer Info"
-              className="w-16 h-16 rounded-full border border-white shadow-lg cursor-pointer animate-pulse hover:scale-105 transition-transform duration-200"
-            />
+          <Link href="/">
+  <Image
+    src="/logo.png"
+    alt="Developer Info"
+    width={64}
+    height={64}
+    className="rounded-full border border-white shadow-lg cursor-pointer animate-pulse hover:scale-105 transition-transform duration-200"
+  />
+</Link>
             <div className="absolute bottom-full right-0 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs px-3 py-2 rounded shadow-lg whitespace-nowrap">
               Developed by Ketan Chokkara · Internship 2025
             </div></a>
