@@ -16,19 +16,19 @@ const Home = () => {
     <br></br>
     <div className="floating-images mt-6 flex justify-center gap-6 z-10">
       <div className="float-img-wrapper float-delay-0">
-        <img src="/images/image1.png" alt="Floating 1" className="w-14 rounded-2xl hover:scale-105 transition-transform" />
+        <image src="/images/image1.png" alt="Floating 1" className="w-14 rounded-2xl hover:scale-105 transition-transform" />
       </div>
       <div className="float-img-wrapper float-delay-1">
-        <img src="/images/image2.png" alt="Floating 2" className="w-14 rounded-2xl hover:scale-105 transition-transform" />
+        <image src="/images/image2.png" alt="Floating 2" className="w-14 rounded-2xl hover:scale-105 transition-transform" />
       </div>
       <div className="float-img-wrapper float-delay-2">
-        <img src="/images/image3.png" alt="Floating 3" className="w-15 h-15  rounded-2xl hover:scale-105 transition-transform" />
+        <image src="/images/image3.png" alt="Floating 3" className="w-15 h-15  rounded-2xl hover:scale-105 transition-transform" />
       </div>
        <div className="float-img-wrapper float-delay-3">
-        <img src="/images/image4.png" alt="Floating 4" className="w-15 h-15 rounded-2xl hover:scale-105 transition-transform" />
+        <image src="/images/image4.png" alt="Floating 4" className="w-15 h-15 rounded-2xl hover:scale-105 transition-transform" />
       </div>
       <div className="float-img-wrapper float-delay-4">
-        <img src="/images/image5.png" alt="Floating 5" className="w-14 rounded-2xl hover:scale-105 transition-transform" />
+        <image src="/images/image5.png" alt="Floating 5" className="w-14 rounded-2xl hover:scale-105 transition-transform" />
       </div>
       
       </div>
