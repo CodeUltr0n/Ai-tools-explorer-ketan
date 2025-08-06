@@ -15,8 +15,7 @@ Generate high-quality, unique images from text prompts using multiple AI models.
 ![Homepage](https://github.com/user-attachments/assets/8e56a949-a8fb-4bcc-bc5b-adf63737f900)
 ![Select Your Model](https://github.com/user-attachments/assets/e7637b79-7821-420f-b1e7-7a72984a9d0b)
 ![Enter Your Prompt](https://github.com/user-attachments/assets/f2facae6-197a-45c2-8d8a-485b0b473013)
-![Result](<img width="1174" height="807" alt="Screenshot 2025-08-03 at 1 26 08 AM" src="https://github.com/user-attachments/assets/f6381289-0148-4753-b8cb-e51eca47e8b4" />
-)
+![Result](https://github.com/user-attachments/assets/f6381289-0148-4753-b8cb-e51eca47e8b4)
 
 🎥 [Watch Demo Video](https://drive.google.com/file/d/1FMcABS_asKqMoSGKizecs2IAY4vY1w-1/view?usp=drive_link)
 
