@@ -1,6 +1,6 @@
 # 🧠 AI Multi-Model Image Generator
 
-Generate high-quality, unique images from text prompts using multiple AI models. This project integrates **Next.js App Router**, **Tailwind CSS**, and the **Stability AI** API.
+Generate high-quality, unique images from text prompts using multiple AI models. This project integrates **Next.js App Router**, **Tailwind CSS**, and the **API**
 
 ---
 
