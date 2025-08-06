@@ -34,26 +34,26 @@ Generate high-quality, unique images from text prompts using multiple AI models.
 ## 🛠️ Getting Started
 
 ### 1. Clone the Repository
-
+```bash
 git clone https://github.com/yourusername/ai-models-tool.git
 cd ai-models-tool
-
+ ```
 ### 2. Install Dependencies
-
+ ```bash
 npm install
 # or
 yarn install
-
+ ```
 ### 3. Configure Environment Variables
-
+```bash
 Create a .env.local file in the root of your project and add your Stability AI API key:
-
+```
 ### 4. Run the Development Server
-
+```bash
 npm run dev
 # or
 yarn dev
-
+```
 Visit: http://localhost:3000 to use the application locally.
 
 🧠 Decisions Made
