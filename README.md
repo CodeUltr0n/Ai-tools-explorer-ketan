@@ -107,7 +107,7 @@ Here are some notable decisions made during the development of this project:
 
 This project was developed as part of an internship assignment to demonstrate practical skills in full-stack development, AI integration, and UI/UX design. It reflects:
 	•	A solid understanding of modern web development with Next.js and Tailwind CSS
-	•	Integration of third-party APIs like Stability AI
+	•	Integration of third-party APIs 
 	•	A focus on performance, design, and user experience
 
 I’m excited about the opportunity to contribute meaningfully to real-world projects and continue growing as a developer.
