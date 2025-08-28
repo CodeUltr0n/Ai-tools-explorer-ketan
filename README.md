@@ -6,7 +6,7 @@ Generate high-quality, unique images from text prompts using multiple AI models.
 
 ##  Live Demo
 
-[AI Tool Explorer]((https://ai-tools-explorer-ketan-sa5l.vercel.app/))
+[AI Tool Explorer]([https://ai-tools-explorer-ketan-sa5l.vercel.app/])
 
 ---
 
